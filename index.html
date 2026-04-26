@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- ===================================================
+         Pain & Passion — Site Statique
+         Artisan Boulanger — Trois-Rivières, Guadeloupe
+         Prêt pour GitHub Pages
+    =================================================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Pain & Passion — Artisan Boulanger à Trois-Rivières, Guadeloupe</title>
+    <meta name="description" content="Boulangerie artisanale Pain & Passion à Trois-Rivières, Guadeloupe. Pains, viennoiseries, pâtisseries fines, wraps & sandwichs créoles préparés avec passion depuis 2026." />
+    <meta name="keywords" content="boulangerie, artisan, Guadeloupe, Trois-Rivières, pain, viennoiserie, pâtisserie, sandwichs, wraps, créole" />
+    <meta name="author" content="Pain et Passion" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pain & Passion — Artisan Boulanger" />
+    <meta property="og:description" content="Fermentation lente, ingrédients locaux, passion brute. Découvrez notre boulangerie artisanale au cœur de la Guadeloupe." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/gallery-4.jpg" />
+
+    <!-- Favicon (logo) -->
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- =============================================
+         LOADER
+    ============================================= -->
+    <div id="loader" aria-hidden="true">
+        <div class="loader-inner">
+            <span class="loader-subtitle">— Depuis 2026 —</span>
+            <p class="loader-title">Pain <span class="gold">&</span> Passion</p>
+            <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+        </div>
+    </div>
+
+    <!-- =============================================
+         HEADER — TOP BAR + NAV
+    ============================================= -->
+    <header id="site-header" class="site-header" role="banner">
+        <div class="topbar">
+            <span class="topbar-sub">Artisan Boulanger — Trois-Rivières</span>
+            <span class="topbar-title">Pain <span class="gold">&</span> Passion</span>
+        </div>
+
+        <!-- Desktop navigation -->
+        <nav class="navbar" id="main-nav" aria-label="Navigation principale">
+            <ul class="nav-list">
+                <li><a href="#accueil"     class="nav-link">Accueil</a></li>
+                <li><a href="#savoir-faire" class="nav-link">L'Atelier</a></li>
+                <li><a href="#univers"     class="nav-link">Univers</a></li>
+                <li><a href="#galerie"     class="nav-link">Galerie</a></li>
+                <li><a href="#contact"     class="nav-link nav-link--cta">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Burger (mobile) -->
+        <button
+            id="burger-btn"
+            class="burger"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+        >
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+        </button>
+    </header>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+        <ul class="mobile-nav-list">
+            <li><a href="#accueil"      class="mobile-nav-link" data-close-menu>Accueil</a></li>
+            <li><a href="#savoir-faire" class="mobile-nav-link" data-close-menu>L'Atelier</a></li>
+            <li><a href="#univers"      class="mobile-nav-link" data-close-menu>Univers</a></li>
+            <li><a href="#galerie"      class="mobile-nav-link" data-close-menu>Galerie</a></li>
+            <li><a href="#contact"      class="mobile-nav-link mobile-nav-link--cta" data-close-menu>Contact</a></li>
+        </ul>
+        <p class="mobile-menu-address">23 rue Général Delacroix, Trois-Rivières 97114, Guadeloupe</p>
+    </div>
+
+    <!-- =============================================
+         MAIN CONTENT
+    ============================================= -->
+    <main id="main-content">
+
+        <!-- ==========================================
+             SECTION 1 — HERO
+        ========================================== -->
+        <!-- ==========================================
+             SECTION 1 — HERO SCRUBBING
+        ========================================== -->
+        <section id="accueil" class="hero-scrub" aria-label="Accueil">
+            <div class="hero-sticky">
+                <!-- Hero background animation (canvas) -->
+                <div class="hero-bg" id="hero-bg">
+                    <canvas id="hero-canvas" class="hero-canvas"></canvas>
+                    <!-- Gradient overlay -->
+                    <div class="hero-overlay"></div>
+                </div>
+
+                <!-- Hero content -->
+                <div class="hero-content" id="hero-content">
+                    <span class="hero-badge reveal-up">— Depuis 2026 —</span>
+                    <h1 class="hero-title reveal-up" style="--delay: 0.15s">
+                        Pain <span class="gold">&</span> Passion
+                    </h1>
+                    <p class="hero-desc reveal-up" style="--delay: 0.3s">
+                        Fermentation lente · Ingrédients locaux · Passion brute
+                    </p>
+                    <div class="hero-actions reveal-up" style="--delay: 0.45s">
+                        <a href="#savoir-faire" class="btn btn--primary">Découvrir l'atelier</a>
+                        <a href="#contact"      class="btn btn--outline">Nous trouver</a>
+                    </div>
+                </div>
+
+                <!-- Bottom Fade -->
+                <div class="hero-bottom-fade"></div>
+
+                <!-- Scroll indicator -->
+                <div class="scroll-indicator" aria-hidden="true" id="hero-scroll-indicator">
+                    <span class="scroll-line"></span>
+                    <span class="scroll-text">Défiler pour animer</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 2 — PRÉSENTATION / SAVOIR-FAIRE
+        ========================================== -->
+        <section id="savoir-faire" class="section section--light" aria-labelledby="sf-title">
+            <div class="container">
+                <div class="section-label reveal-up">Savoir-Faire</div>
+                <h2 id="sf-title" class="section-title reveal-up" style="--delay: 0.1s">
+                    Fermentation lente,<br />
+                    ingrédients locaux,<br />
+                    <em class="gold">passion brute.</em>
+                </h2>
+
+                <div class="sf-grid reveal-up" style="--delay: 0.2s">
+                    <!-- Paragraphe -->
+                    <div class="sf-text">
+                        <p>
+                            Situés au cœur de Trois-Rivières, nous redéfinissons la boulangerie
+                            traditionnelle en y insufflant l'âme de la Guadeloupe. Chaque baguette,
+                            chaque viennoiserie raconte une histoire de patience et d'excellence.
+                        </p>
+                        <a href="#univers" class="btn btn--primary" style="margin-top: 2rem;">
+                            Voir nos univers →
+                        </a>
+                    </div>
+
+                    <!-- Carte valeurs -->
+                    <div class="sf-values">
+                        <div class="value-card reveal-left" style="--delay: 0.1s">
+                            <svg class="value-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1M4.22 4.22l.707.707M18.364 18.364l.707.707M3 12H2m20 0h-1M4.929 19.071l.707-.707M18.364 5.636l.707-.707"/><circle cx="12" cy="12" r="4"/></svg>
+                            <div>
+                                <h3>Tradition</h3>
+                                <p>Pétrissage à la main, recettes héritées et transmises avec soin.</p>
+                            </div>
+                        </div>
+                        <div class="value-card reveal-left" style="--delay: 0.2s">
+                            <svg class="value-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9zm0-4.5A4.5 4.5 0 0118 12a4.5 4.5 0 01-9 0 4.5 4.5 0 014.5-4.5z"/></svg>
+                            <div>
+                                <h3>Local & Frais</h3>
+                                <p>Ingrédients sourcés en Guadeloupe, tout est préparé chaque matin.</p>
+                            </div>
+                        </div>
+                        <div class="value-card reveal-left" style="--delay: 0.3s">
+                            <svg class="value-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.5v12m4.5-8.5H7.5M9 21h6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <div>
+                                <h3>Créole Fusion</h3>
+                                <p>La rencontre de la boulangerie française et des saveurs caribéennes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider doré animé -->
+                <div class="gold-divider reveal-scale" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 3 — UNIVERS / SERVICES
+        ========================================== -->
+        <section id="univers" class="section section--white" aria-labelledby="univers-title">
+            <div class="container">
+                <div class="section-label reveal-up">Notre Carte</div>
+                <h2 id="univers-title" class="section-title section-title--serif reveal-up" style="--delay: 0.1s">
+                    Univers <span class="black-serif">Gourmands</span>
+                </h2>
+
+                <div class="universes-grid">
+
+                    <article class="universe-card reveal-up" style="--delay: 0.1s">
+                        <div class="universe-card__img-wrap">
+                            <img src="assets/images/1-brioche.jpg" alt="Boulangerie traditionnelle" loading="lazy" />
+                        </div>
+                        <div class="universe-card__body">
+                            <span class="universe-card__num gold">01</span>
+                            <h3 class="universe-card__title">Savoir-faire</h3>
+                            <p class="universe-card__sub">Boulangerie Traditionnelle</p>
+                            <p class="universe-card__desc">Le goût authentique du pétrissage, des pains croustillants et des brioches moelleuses au quotidien.</p>
+                        </div>
+                    </article>
+
+                    <article class="universe-card reveal-up" style="--delay: 0.2s">
+                        <div class="universe-card__img-wrap">
+                            <img src="assets/images/2-entremets.jpg" alt="Pâtisserie fine" loading="lazy" />
+                        </div>
+                        <div class="universe-card__body">
+                            <span class="universe-card__num gold">02</span>
+                            <h3 class="universe-card__title">Gourmandise</h3>
+                            <p class="universe-card__sub">Pâtisserie Fine</p>
+                            <p class="universe-card__desc">Une célébration de textures et de douceur. Entremets raffinés et spécialités locales.</p>
+                        </div>
+                    </article>
+
+                    <article class="universe-card reveal-up" style="--delay: 0.3s">
+                        <div class="universe-card__img-wrap">
+                            <img src="assets/images/4-wraps.jpg" alt="Wraps et snacking" loading="lazy" />
+                        </div>
+                        <div class="universe-card__body">
+                            <span class="universe-card__num gold">03</span>
+                            <h3 class="universe-card__title">Pause Salée</h3>
+                            <p class="universe-card__sub">Wraps &amp; Snacking</p>
+                            <p class="universe-card__desc">Des options fraîches et généreuses, préparées chaque matin pour votre pause douceur.</p>
+                        </div>
+                    </article>
+
+                    <article class="universe-card reveal-up" style="--delay: 0.4s">
+                        <div class="universe-card__img-wrap">
+                            <img src="assets/images/3-sandwiches.jpg" alt="Sandwichs créoles" loading="lazy" />
+                        </div>
+                        <div class="universe-card__body">
+                            <span class="universe-card__num gold">04</span>
+                            <h3 class="universe-card__title">Creole Fusion</h3>
+                            <p class="universe-card__sub">Sandwichs &amp; Traiteur</p>
+                            <p class="universe-card__desc">La rencontre de la baguette traditionnelle française et des saveurs caraïbéennes.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 4 — GALERIE / CAROUSEL
+        ========================================== -->
+        <section id="galerie" class="section section--light" aria-labelledby="galerie-title">
+            <div class="container">
+                <div class="section-label reveal-up">Notre Vitrine</div>
+                <h2 id="galerie-title" class="section-title section-title--serif reveal-up" style="--delay: 0.1s">
+                    En <span class="black-serif">Images</span>
+                </h2>
+
+                <!-- Carousel -->
+                <div class="carousel reveal-up" style="--delay: 0.15s" role="region" aria-label="Galerie photo" aria-roledescription="carousel">
+                    <div class="carousel__track-wrap">
+                        <ul class="carousel__track" id="carousel-track">
+                            <li class="carousel__slide" role="group" aria-roledescription="diapositive" aria-label="1 de 5">
+                                <img src="assets/images/wraps-maison.jpg" alt="Wraps maison" loading="lazy" />
+                            </li>
+                            <li class="carousel__slide" role="group" aria-roledescription="diapositive" aria-label="2 de 5">
+                                <img src="assets/images/sandwiches-kreyol.jpg" alt="Sandwichs Kréyol" loading="lazy" />
+                            </li>
+                            <li class="carousel__slide" role="group" aria-roledescription="diapositive" aria-label="3 de 5">
+                                <img src="assets/images/4-wraps.jpg" alt="Wraps frais" loading="lazy" />
+                            </li>
+                            <li class="carousel__slide" role="group" aria-roledescription="diapositive" aria-label="4 de 5">
+                                <img src="assets/images/3-sandwiches.jpg" alt="Nos sandwichs" loading="lazy" />
+                            </li>
+                            <li class="carousel__slide" role="group" aria-roledescription="diapositive" aria-label="5 de 5">
+                                <img src="assets/images/2-entremets.jpg" alt="Entremets et douceurs" loading="lazy" />
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Arrow buttons -->
+                    <button class="carousel__btn carousel__btn--prev" id="carousel-prev" aria-label="Image précédente">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="22" height="22" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <button class="carousel__btn carousel__btn--next" id="carousel-next" aria-label="Image suivante">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="22" height="22" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+
+                    <!-- Dot pagination -->
+                    <div class="carousel__dots" id="carousel-dots" role="tablist" aria-label="Sélectionner une diapositive"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 5 — CONTACT + HORAIRES
+        ========================================== -->
+        <section id="contact" class="section section--white" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-label reveal-up">Nous Rejoindre</div>
+                <h2 id="contact-title" class="section-title reveal-up" style="--delay: 0.1s">Informations</h2>
+                <p class="section-subtitle reveal-up" style="--delay: 0.2s">Détails pratiques et formulaire de contact</p>
+
+                <div class="contact-grid">
+
+                    <!-- Colonne gauche : horaires + localisation -->
+                    <div class="contact-info">
+
+                        <!-- Horaires -->
+                        <div class="info-card reveal-left" style="--delay: 0.1s">
+                            <h3 class="info-card__title">Heures d'ouverture</h3>
+                            <ul class="hours-list" aria-label="Horaires d'ouverture">
+                                <li class="hours-row">
+                                    <div>
+                                        <p class="hours-day">Mardi — Samedi</p>
+                                        <p class="hours-note">Service continu</p>
+                                    </div>
+                                    <span class="hours-time">06:00 — 19:00</span>
+                                </li>
+                                <li class="hours-row">
+                                    <div>
+                                        <p class="hours-day">Dimanche</p>
+                                        <p class="hours-note">Fermeture à midi</p>
+                                    </div>
+                                    <span class="hours-time">06:30 — 12:00</span>
+                                </li>
+                                <li class="hours-row hours-row--closed">
+                                    <div>
+                                        <p class="hours-day">Lundi</p>
+                                        <p class="hours-note">Jour de repos</p>
+                                    </div>
+                                    <span class="hours-time hours-time--closed">Fermé</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Instagram -->
+                        <a
+                            href="https://www.instagram.com/boulangeriepainsetpassion"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="info-card info-card--instagram reveal-left"
+                            style="--delay: 0.2s"
+                            aria-label="Suivez-nous sur Instagram @boulangeriepainsetpassion"
+                        >
+                            <p class="insta-follow">Suivez-nous sur</p>
+                            <p class="insta-title">Instagram</p>
+                            <p class="insta-desc">Découvrez nos coulisses et nouveautés</p>
+                            <span class="insta-handle">@boulangeriepainsetpassion</span>
+                        </a>
+
+                        <!-- Adresse & Téléphone -->
+                        <div class="info-card reveal-left" style="--delay: 0.3s">
+                            <h3 class="info-card__title">Nous Trouver</h3>
+                            <a href="tel:+590690058880" class="contact-phone" aria-label="Appeler le +590 690 05 88 80">+590 690 05 88 80</a>
+                            <address class="contact-address">
+                                23 rue Général Delacroix,<br />
+                                Trois-Rivières 97114,<br />
+                                Guadeloupe
+                            </address>
+                        </div>
+                    </div>
+
+                    <!-- Colonne droite : formulaire de contact -->
+                    <div class="contact-form-wrap reveal-right" style="--delay: 0.2s">
+                        <div class="info-card contact-form-card">
+                            <h3 class="info-card__title">Envoyer un message</h3>
+                            <p class="form-disclaimer">
+                                Ce formulaire est fonctionnel côté client. Votre message sera ouvert dans votre application mail.
+                            </p>
+
+                            <form
+                                id="contact-form"
+                                class="contact-form"
+                                novalidate
+                                aria-label="Formulaire de contact"
+                            >
+                                <div class="form-group">
+                                    <label for="input-name" class="form-label">Nom complet <span aria-hidden="true">*</span></label>
+                                    <input
+                                        type="text"
+                                        id="input-name"
+                                        name="name"
+                                        class="form-input"
+                                        placeholder="Votre nom"
+                                        required
+                                        autocomplete="name"
+                                        aria-required="true"
+                                    />
+                                    <span class="form-error" id="error-name" role="alert"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="input-email" class="form-label">Email <span aria-hidden="true">*</span></label>
+                                    <input
+                                        type="email"
+                                        id="input-email"
+                                        name="email"
+                                        class="form-input"
+                                        placeholder="votre@email.com"
+                                        required
+                                        autocomplete="email"
+                                        aria-required="true"
+                                    />
+                                    <span class="form-error" id="error-email" role="alert"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="input-subject" class="form-label">Sujet</label>
+                                    <input
+                                        type="text"
+                                        id="input-subject"
+                                        name="subject"
+                                        class="form-input"
+                                        placeholder="Commande, renseignements…"
+                                        autocomplete="off"
+                                    />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="input-message" class="form-label">Message <span aria-hidden="true">*</span></label>
+                                    <textarea
+                                        id="input-message"
+                                        name="message"
+                                        class="form-input form-textarea"
+                                        placeholder="Votre message…"
+                                        rows="5"
+                                        required
+                                        aria-required="true"
+                                    ></textarea>
+                                    <span class="form-error" id="error-message" role="alert"></span>
+                                </div>
+
+                                <button type="submit" class="btn btn--primary btn--full" id="form-submit">
+                                    <span class="btn-text">Envoyer le message</span>
+                                    <span class="btn-icon" aria-hidden="true">→</span>
+                                </button>
+
+                                <!-- Toast de confirmation -->
+                                <div id="form-toast" class="form-toast" role="status" aria-live="polite"></div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =============================================
+         FOOTER
+    ============================================= -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <p class="footer-copy">&copy; <span id="footer-year"></span> Pain et Passion.</p>
+            <p class="footer-tagline">Artisan Créateur — Guadeloupe</p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de page">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="20" height="20" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+        </svg>
+    </button>
+
+    <!-- Grain overlay décoratif -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+</html>
